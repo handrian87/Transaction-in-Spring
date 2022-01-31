@@ -1,8 +1,8 @@
-package Controller;
+package spring.start.transaction.Controller;
 
-import Model.Account;
-import Model.TransferRequest;
-import Service.TransferService;
+import spring.start.transaction.Model.Account;
+import spring.start.transaction.Model.TransferRequest;
+import spring.start.transaction.Service.TransferService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -14,6 +14,7 @@ import java.util.List;
 public class AccountController {
     private final TransferService transferService;
     public AccountController(TransferService transferService){
+
         this.transferService = transferService;
     }
     @PostMapping("/transfer")
@@ -21,11 +22,16 @@ public class AccountController {
         transferService.transferMoney(
                 request.getSenderAccountId(),
                 request.getReceiverAccountId(),
-                request.getAMOUNT()
+                request.getAmount()
         );
     }
     @GetMapping("/accounts")
     public List<Account> getAllAccounts(){
         return transferService.getAllAccounts();
+    }
+
+    @GetMapping("/test")
+    public String testing() {
+        return "operation_test";
     }
 }

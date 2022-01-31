@@ -1,4 +1,4 @@
-package Model;
+package spring.start.transaction.Model;
 
 import lombok.Data;
 
@@ -8,5 +8,5 @@ import java.math.BigDecimal;
 public class TransferRequest {
     private long senderAccountId;
     private long receiverAccountId;
-    private BigDecimal AMOUNT;
+    private BigDecimal amount;
 }

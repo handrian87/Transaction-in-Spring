@@ -1,4 +1,4 @@
-package Model;
+package spring.start.transaction.Model;
 
 import lombok.Data;
 
