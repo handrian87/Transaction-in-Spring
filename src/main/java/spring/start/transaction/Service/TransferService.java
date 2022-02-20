@@ -24,7 +24,7 @@ public class TransferService {
         accountRepository.changeAmount(idSender,senderNewAmount);
         accountRepository.changeAmount(idReceveir, receiveNewAmount);
 
-        throw new RuntimeException("Testing retrieving data to the sender after getting an exception");
+        //throw new RuntimeException("Testing retrieving data to the sender after getting an exception");
     }
 
     public List<Account> getAllAccounts(){
